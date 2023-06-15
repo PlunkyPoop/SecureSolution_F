@@ -73,11 +73,13 @@ const Team = () => {
 
     
     return(
-        <Box m="15px">
-            <Header title="Customer Accounts" subtitle="Account data of customers" />
+        <Box m="20px">
+            <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
+                <Header title="Alerts"/>
+            </Box>
             <Box
-            m="30px 0 0 0"
-            height="75vh"
+            m="-10px 0 0 0"
+            height="85vh"
             sx={{
                 "& .MuiDataGrid-root": {
                     border: "none",

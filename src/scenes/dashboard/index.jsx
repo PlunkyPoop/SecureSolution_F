@@ -8,6 +8,7 @@ import TrafficIcon from "@mui/icons-material/Traffic";
 import Header from "../../components/Header";
 import LineChart from "../../components/LineChart";
 import StatBox from "../../components/StatBox";
+import {PieChart} from "@mui/icons-material";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -114,10 +115,52 @@ const Dashboard = () => {
             </Box>
     
             {/* ROW 2 */}
+              {/* TOTAL CLIENTS */}
+              <Box
+                  gridColumn="span 6"
+                  backgroundColor={colors.primary[400]}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+              >
+                  <PieChart
+                      title="32,441"
+                      subtitle="Total Clients"
+                      progress="0.30"
+                      increase="+5%"
+                      icon={
+                          <PersonAddIcon
+                              sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                          />
+                      }
+                  />
+              </Box>
 
+              {/* TRAFFIC BOX */}
+              <Box
+                  gridColumn="span 6"
+                  backgroundColor={colors.primary[400]}
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+              >
+                  <PieChart
+                      title="1,325,134"
+                      subtitle="Traffic Received"
+                      progress="0.80"
+                      increase="+43%"
+                      icon={
+                          <TrafficIcon
+                              sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                          />
+                      }
+                  />
+              </Box>
+
+            {/* ROW 3 */}
             {/* LINECHART */}
             <Box
-              gridColumn="span 9"
+              gridColumn="span 12"
               gridRow="span 2"
               backgroundColor={colors.primary[400]}
             >
