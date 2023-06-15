@@ -16,23 +16,8 @@ const Dashboard = () => {
     return (
         <Box m="20px">
           {/* HEADER */}
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
-    
-            <Box>
-              <Button
-                sx={{
-                  backgroundColor: colors.blueAccent[700],
-                  color: colors.grey[100],
-                  fontSize: "14px",
-                  fontWeight: "bold",
-                  padding: "10px 20px",
-                }}
-              >
-                <DownloadOutlinedIcon sx={{ mr: "10px" }} />
-                Download Reports
-              </Button>
-            </Box>
+          <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
+            <Header title="Monitoring FHICT"/>
           </Box>
     
           {/* GRID & CHARTS */}
@@ -165,35 +150,7 @@ const Dashboard = () => {
               </Box>
             </Box>
 
-            {/* NEW PRODUCT BOX */}
-            <Box
-              gridColumn="span 3"
-              gridRow="span 2"
-              backgroundColor={colors.primary[400]}
-            >
-                <Box
-                mt="25px"
-                p="0 30px"
-                display="flex "
-                justifyContent="space-between"
-                alignItems="center"
-                >
-                    <Box>
-                    <Typography
-                        variant="h5"
-                        fontWeight="600"
-                        color={colors.grey[100]}
-                    >
-                        Products
-                    </Typography>
-                    </Box>
-                </Box>
             
-
-
-
-
-            </Box>
     
             
           </Box>
