@@ -20,9 +20,7 @@ function App() {
             <Topbar />
             <Routes>
               <Route path="/" element={<Dashboard />} />
-
               <Route path="/alerts" element={<Alerts />} />
-
             </Routes>
           </main>
         </div>
