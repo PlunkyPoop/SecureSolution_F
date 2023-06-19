@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import {Box, Container} from "@mui/material";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataContacts } from "../../data/mockData";
@@ -73,49 +73,51 @@ const Team = () => {
 
     
     return(
-        <Box m="20px">
-            <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
-                <Header title="Alerts"/>
-            </Box>
-            <Box
-            m="-10px 0 0 0"
-            height="85vh"
-            sx={{
-                "& .MuiDataGrid-root": {
-                    border: "none",
-                  },
-                  "& .MuiDataGrid-cell": {
-                    borderBottom: "none",
-                  },
-                  "& .name-column--cell": {
-                    color: colors.greenAccent[300],
-                  },
-                  "& .MuiDataGrid-columnHeaders": {
-                    backgroundColor: colors.blueAccent[700],
-                    borderBottom: "none",
-                  },
-                  "& .MuiDataGrid-virtualScroller": {
-                    backgroundColor: colors.primary[400],
-                  },
-                  "& .MuiDataGrid-footerContainer": {
-                    borderTop: "none",
-                    backgroundColor: colors.blueAccent[700],
-                  },
-                  "& .MuiCheckbox-root": {
-                    color: `${colors.greenAccent[200]} !important`,
-                  },
-                  "& .MuiDataGrid-toolbarContainer .MuiButton-text":{
-                    color: `${colors.grey[100]} !important`,
-                  }
-                }}
-            >
-                <DataGrid
-                rows={mockDataContacts}
-                columns={columns}
-                components={{ Toolbar: GridToolbar }}
-                />
-            </Box>
-        </Box>
+        <div>
+            <Container  maxWidth={false}>
+                <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
+                    <Header title="Alerts"/>
+                </Box>
+                <Box
+                    m="-25px 0 0 0"
+                    height="89vh"
+                    sx={{
+                        "& .MuiDataGrid-root": {
+                            border: "none",
+                        },
+                        "& .MuiDataGrid-cell": {
+                            borderBottom: "none",
+                        },
+                        "& .name-column--cell": {
+                            color: colors.greenAccent[300],
+                        },
+                        "& .MuiDataGrid-columnHeaders": {
+                            backgroundColor: colors.blueAccent[700],
+                            borderBottom: "none",
+                        },
+                        "& .MuiDataGrid-virtualScroller": {
+                            backgroundColor: colors.primary[400],
+                        },
+                        "& .MuiDataGrid-footerContainer": {
+                            borderTop: "none",
+                            backgroundColor: colors.blueAccent[700],
+                        },
+                        "& .MuiCheckbox-root": {
+                            color: `${colors.greenAccent[200]} !important`,
+                        },
+                        "& .MuiDataGrid-toolbarContainer .MuiButton-text":{
+                            color: `${colors.grey[100]} !important`,
+                        }
+                    }}
+                >
+                    <DataGrid
+                        rows={mockDataContacts}
+                        columns={columns}
+                        components={{ Toolbar: GridToolbar }}
+                    />
+                </Box>
+            </Container>
+        </div>
     )
 }
 
