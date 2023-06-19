@@ -40,10 +40,10 @@ const PieChart = () => {
           }}
         margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
         innerRadius={0.5}
-        padAngle={0.7}
+        padAngle={2}
         cornerRadius={3}
         activeOuterRadiusOffset={8}
-        borderWidth={1}
+        borderWidth={0.5}
         borderColor={{
             from: 'color',
             modifiers: [
@@ -54,8 +54,8 @@ const PieChart = () => {
             ]
         }}
         arcLinkLabelsSkipAngle={10}
-        arcLinkLabelsTextColor={colors.primary[400]}
-        arcLinkLabelsThickness={0}
+        arcLinkLabelsTextColor={colors.grey[100]}
+        arcLinkLabelsThickness={1}
         arcLinkLabelsColor={{ from: 'color' }}
         arcLabelsSkipAngle={10}
         arcLabelsTextColor={{
@@ -73,7 +73,7 @@ const PieChart = () => {
         //         id: 'dots',
         //         type: 'patternDots',
         //         background: 'inherit',
-        //         color: 'rgba(255, 255, 255, 0.3)',
+        //         color: 'rgb(255,255,255)',
         //         size: 4,
         //         padding: 1,
         //         stagger: true
@@ -82,7 +82,7 @@ const PieChart = () => {
         //         id: 'lines',
         //         type: 'patternLines',
         //         background: 'inherit',
-        //         color: 'rgba(255, 255, 255, 0.3)',
+        //         color: 'rgb(255,255,255)',
         //         rotation: -45,
         //         lineWidth: 6,
         //         spacing: 10
@@ -98,7 +98,7 @@ const PieChart = () => {
                 itemsSpacing: 0,
                 itemWidth: 60,
                 itemHeight: 18,
-                itemTextColor: '#999',
+                itemTextColor: '#808080',
                 itemDirection: 'top-to-bottom',
                 itemOpacity: 1,
                 symbolSize: 18,
