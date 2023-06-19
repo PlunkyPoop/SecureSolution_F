@@ -16,140 +16,141 @@ const Dashboard = () => {
     return (
         <div>
             <Container  maxWidth={false}>
-                    {/* HEADER */}
-                    <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
-                        <Header title="Monitoring FHICT"/>
-                    </Box>
+                {/* HEADER */}
+                <Box mt="-50px" display="flex" justifyContent="space-between" alignItems="center">
+                    <Header title="Monitoring FHICT"/>
+                </Box>
 
-                    {/* GRID & CHARTS */}
+                {/* GRID & CHARTS */}
+                <Box
+                    sx={{flexWrap: "wrap"}}
+                    display="grid"
+                    gridTemplateColumns="repeat(12, 1fr)"
+                    gridAutoRows="140px"
+                    gap="20px"
+                >
+                    {/* ROW 1 */}
+
+                    {/* Aantal connecties */}
                     <Box
-                        sx={{flexWrap: "wrap"}}
-                        display="grid"
-                        gridTemplateColumns="repeat(12, 1fr)"
-                        gridAutoRows="140px"
-                        gap="20px"
+                        gridColumn="span 3"
+                        backgroundColor={colors.primary[400]}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
                     >
-                        {/* ROW 1 */}
+                        <StatBox
+                            title="12,361"
+                            subtitle="Aantal connecties"
+                            icon={
+                                <EmailIcon
+                                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                                />
+                            }
+                        />
+                    </Box>
 
-                        {/* Aantal connecties */}
+                    {/* CPU Gebruik */}
+                    <Box
+                        gridColumn="span 3"
+                        backgroundColor={colors.primary[400]}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <StatBox
+                            title="40%"
+                            subtitle="CPU Gebruik"
+                            // progress="0.30"
+                            // increase="+5%"
+                            icon={
+                                <PointOfSaleIcon
+                                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                                />
+                            }
+                        />
+                    </Box>
+
+                    {/* Opslag gebruik */}
+                    <Box
+                        gridColumn="span 3"
+                        backgroundColor={colors.primary[400]}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <StatBox
+                            title="42TB"
+                            subtitle="Opslag gebruik"
+                            // progress="0.30"
+                            // increase="+5%"
+                            icon={
+                                <PersonAddIcon
+                                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                                />
+                            }
+                        />
+                    </Box>
+
+                    {/* Aantal meldingen */}
+                    <Box
+                        gridColumn="span 3"
+                        backgroundColor={colors.primary[400]}
+                        display="flex"
+                        alignItems="center"
+                        justifyContent="center"
+                    >
+                        <StatBox
+                            title="6"
+                            subtitle="Aantal meldingen"
+                            // progress="0.30"
+                            // increase="+5%"
+                            icon={
+                                <TrafficIcon
+                                    sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                                />
+                            }
+                        />
+                    </Box>
+
+                    {/* ROW 2 */}
+
+                    {/* LINECHART */}
+                    <Box
+                        gridColumn="span 12"
+                        gridRow="span 2"
+                        backgroundColor={colors.primary[400]}
+                    >
                         <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[400]}
-                            display="flex"
+                            mt="25px"
+                            p="0 30px"
+                            display="flex "
+                            justifyContent="space-between"
                             alignItems="center"
-                            justifyContent="center"
                         >
-                            <StatBox
-                                title="12,361"
-                                subtitle="Aantal connecties"
-                                icon={
-                                    <EmailIcon
-                                        sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-                                    />
-                                }
-                            />
-                        </Box>
-
-                        {/* CPU Gebruik */}
-                        <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[400]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            <StatBox
-                                title="40%"
-                                subtitle="CPU Gebruik"
-                                // progress="0.30"
-                                // increase="+5%"
-                                icon={
-                                    <PointOfSaleIcon
-                                        sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-                                    />
-                                }
-                            />
-                        </Box>
-
-                        {/* Opslag gebruik */}
-                        <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[400]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            <StatBox
-                                title="42TB"
-                                subtitle="Opslag gebruik"
-                                // progress="0.30"
-                                // increase="+5%"
-                                icon={
-                                    <PersonAddIcon
-                                        sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-                                    />
-                                }
-                            />
-                        </Box>
-
-                        {/* Aantal meldingen */}
-                        <Box
-                            gridColumn="span 3"
-                            backgroundColor={colors.primary[400]}
-                            display="flex"
-                            alignItems="center"
-                            justifyContent="center"
-                        >
-                            <StatBox
-                                title="6"
-                                subtitle="Aantal meldingen"
-                                // progress="0.30"
-                                // increase="+5%"
-                                icon={
-                                    <TrafficIcon
-                                        sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
-                                    />
-                                }
-                            />
-                        </Box>
-
-                        {/* ROW 2 */}
-
-                        {/* LINECHART */}
-                        <Box
-                            gridColumn="span 12"
-                            gridRow="span 2"
-                            backgroundColor={colors.primary[400]}
-                        >
-                            <Box
-                                mt="25px"
-                                p="0 30px"
-                                display="flex "
-                                justifyContent="space-between"
-                                alignItems="center"
-                            >
-                                <Box>
-                                    <Typography
-                                        variant="h5"
-                                        fontWeight="600"
-                                        color={colors.grey[100]}
-                                    >
-                                        Number of sessions overtime
-                                    </Typography>
-                                    <Typography
-                                        variant="h3"
-                                        fontWeight="bold"
-                                        color={colors.greenAccent[500]}
-                                    >
-                                        4.463.290
-                                    </Typography>
-                                </Box>
+                            <Box>
+                                <Typography
+                                    variant="h5"
+                                    fontWeight="600"
+                                    color={colors.grey[100]}
+                                >
+                                    Number of sessions overtime
+                                </Typography>
+                                <Typography
+                                    variant="h3"
+                                    fontWeight="bold"
+                                    color={colors.greenAccent[500]}
+                                >
+                                    4.463.290
+                                </Typography>
                             </Box>
-                            <Box height="250px" m="-20px 0 0 0">
-                                <LineChart isDashboard={true} />
-                            </Box>
+                        </Box>
+                        <Box height="250px" m="-20px 0 0 0">
+                            <LineChart isDashboard={true} />
                         </Box>
                     </Box>
+                </Box>
+
                 <Grid container sx={{marginTop:"20px"}}>
                     {/* ROW 3 */}
                     {/* Pie 1 */}
@@ -179,6 +180,50 @@ const Dashboard = () => {
                         <PieChart sx={{margin:"10px"}}/>
                     </Grid>
                 </Grid>
+                {/*/!* GRID & CHARTS *!/*/}
+                {/*<Box*/}
+                {/*    sx={{flexWrap: "wrap", paddingBottom: "20px"}}*/}
+                {/*    display="grid"*/}
+                {/*    gridTemplateColumns="repeat(12, 1fr)"*/}
+                {/*    gridAutoRows="140px"*/}
+                {/*    gap="20px"*/}
+                {/*>*/}
+                {/*    /!* ROW 2 *!/*/}
+                {/*    /!* LINECHART *!/*/}
+                {/*    <Box*/}
+                {/*        gridColumn="span 12"*/}
+                {/*        gridRow="span 2"*/}
+                {/*        backgroundColor={colors.primary[400]}*/}
+                {/*    >*/}
+                {/*        <Box*/}
+                {/*            mt="25px"*/}
+                {/*            p="0 30px"*/}
+                {/*            display="flex "*/}
+                {/*            justifyContent="space-between"*/}
+                {/*            alignItems="center"*/}
+                {/*        >*/}
+                {/*            <Box>*/}
+                {/*                <Typography*/}
+                {/*                    variant="h5"*/}
+                {/*                    fontWeight="600"*/}
+                {/*                    color={colors.grey[100]}*/}
+                {/*                >*/}
+                {/*                    Number of sessions overtime*/}
+                {/*                </Typography>*/}
+                {/*                <Typography*/}
+                {/*                    variant="h3"*/}
+                {/*                    fontWeight="bold"*/}
+                {/*                    color={colors.greenAccent[500]}*/}
+                {/*                >*/}
+                {/*                    4.463.290*/}
+                {/*                </Typography>*/}
+                {/*            </Box>*/}
+                {/*        </Box>*/}
+                {/*        <Box height="250px" m="-20px 0 0 0">*/}
+                {/*            <LineChart isDashboard={true} />*/}
+                {/*        </Box>*/}
+                {/*    </Box>*/}
+                {/*</Box>*/}
             </Container>
         </div>
       );
