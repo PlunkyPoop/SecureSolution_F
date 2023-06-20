@@ -1,37 +1,7 @@
 import { tokens } from "../theme";
 
-export const mockDataTeam = [
-  {
-    id: 1,
-    name: "Maarten",
-	  lastname: "Van Dorp",
-    email: "Maartenvandorp1@gmail.com",
-    phonenumber: "06 31322606",
-	  role: "CEO",
-    age: 18,
-    access: "admin",
-  },
-  {
-    id: 2,
-    name: "Jaimy",
-    lastname: "de Lannoy",
-    email: "jaimyy.delannoy@gmail.com",
-    phonenumber: "06 33622490",
-	  role: "CEO",
-    age: 18,
-    access: "admin",
-  },
-  {
-    id: 3,
-    name: "Thijne",
-    lastname: "Knoester",
-    email: "thijneknoester@gmail.com",
-    phonenumber: "06 16081917",
-	  role: "CEO",
-    age: 18,
-    access: "admin",
-  }
-];
+
+
 
 export const mockDataContacts = [
   {
@@ -189,533 +159,7 @@ export const mockDataContacts = [
     zipCode: "6133VL",
   } 
 ];
-
-export const mockDataOrders = [
-  {
-    id: "10293940029394",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "0192863545362723",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "82738495933827",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "039262537443244",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "41526374626374895",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "7362527849200293784",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "74625452536456734",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-  {
-    id: "93747283422343",
-    listOfProducts: [
-      {
-        products:
-        {
-          id: 1,
-          price: 19.99
-        },
-        amount: 1,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 2,
-          price: 19.99
-        },
-        amount: 4,
-        size: "xl"
-      },
-      {
-        products:
-        {
-          id: 3,
-          price: 19.99
-        },
-        amount: 3,
-        size: "xl"
-      }
-    ],
-    name: "Joe",
-    lastname: "Momma",
-    email: "email",
-    phonenumber: "0290302",
-    streetName: "Avondsterstraat",
-    homeNumber: "4",
-    country: "Nederland",
-    county: "Limburg",
-    city: "Sittard",
-    zipCode: "6133VL",
-    orderdate: "dateformat",
-    deliverydate: "delivery target",
-    status: "delivered? On its way?",
-  },
-];
-
-export const mockTransactions = [
-  {
-    txId: "01e4dsa",
-    user: "johndoe",
-    date: "2021-09-01",
-    cost: "43.95",
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
-  },
-  {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
-  },
-  {
-    txId: "51034szv",
-    user: "goodmanave",
-    date: "2022-11-05",
-    cost: "200.95",
-  },
-  {
-    txId: "0a123sb",
-    user: "stevebower",
-    date: "2022-11-02",
-    cost: "13.55",
-  },
-  {
-    txId: "01e4dsa",
-    user: "aberdohnny",
-    date: "2021-09-01",
-    cost: "43.95",
-  },
-  {
-    txId: "120s51a",
-    user: "wootzifer",
-    date: "2019-04-15",
-    cost: "24.20",
-  },
-  {
-    txId: "0315dsaa",
-    user: "jackdower",
-    date: "2022-04-01",
-    cost: "133.45",
-  },
-];
-
-export const mockBarData = [
-  {
-    country: "January",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "February",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "March",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "April",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "May",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "June",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "July",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "August",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "September",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "October",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "November",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-  {
-    country: "December",
-    costs: 137,
-    costsColor: "hsl(229, 70%, 50%)",
-    revenue: 96,
-    revenueColor: "hsl(296, 70%, 50%)",
-    profit: 72,
-    profitColor: "hsl(97, 70%, 50%)"
-  },
-];
-
-export const mockPieData = [
+export const mockPieData1 = [
   
   {
     id: "costs",
@@ -736,7 +180,48 @@ export const mockPieData = [
     color: "hsl(344, 70%, 50%)",
   },
 ];
-
+export const mockPieData2 = [
+  
+  {
+    id: "costs",
+    label: "Costs",
+    value: 170,
+    color: "hsl(162, 70%, 50%)",
+  },
+  {
+    id: "revenue",
+    label: "Revenue",
+    value: 322,
+    color: "hsl(291, 70%, 50%)",
+  },
+  {
+    id: "profit",
+    label: "Profit",
+    value: 584,
+    color: "hsl(344, 70%, 50%)",
+  },
+];
+export const mockPieData3 = [
+  
+  {
+    id: "costs",
+    label: "Costs",
+    value: 170,
+    color: "hsl(162, 70%, 50%)",
+  },
+  {
+    id: "revenue",
+    label: "Revenue",
+    value: 322,
+    color: "hsl(291, 70%, 50%)",
+  },
+  {
+    id: "profit",
+    label: "Profit",
+    value: 584,
+    color: "hsl(344, 70%, 50%)",
+  },
+];
 export const mockLineData = [
   {
     id: "Connections",

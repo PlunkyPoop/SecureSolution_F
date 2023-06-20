@@ -9,10 +9,37 @@ import LineChart from "../../components/LineChart";
 import StatBox from "../../components/StatBox";
 import PieChart from "../../components/PieChart";
 
+import useWebSocket , { ReadyState } from 'react-use-websocket';
+
+
+
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     
+    const {
+        sendMessage,
+        sendJsonMessage,
+        lastMessage,
+        lastJsonMessage,
+        readyState,
+        getWebSocket,
+      } = useWebSocket('ws://localhost:5268/ws', {
+        onOpen: (event) => {
+            console.log('opened');
+            sendJsonMessage('Client');
+        },        
+        shouldReconnect: (closeEvent) => true,
+      });
+
+      const response = lastJsonMessage;
+
+      console.log(response);
+      
+
+
+
+      
     return (
         <div>
             <Container  maxWidth={false}>
