@@ -163,22 +163,32 @@ export const mockPieData1 = [
   
   {
     id: "costs",
-    label: "Costs",
-    value: 170,
-    color: "hsl(162, 70%, 50%)",
+    value: 170
   },
   {
     id: "revenue",
-    label: "Revenue",
-    value: 322,
-    color: "hsl(291, 70%, 50%)",
+    value: 322
+  },
+  {
+    id: "profi1t",
+    value: 58
+  },
+  {
+    id: "pro2fit",
+    value: 5844
+  },
+  {
+    id: "pro44f3it",
+    value: 5814
   },
   {
     id: "profit",
-    label: "Profit",
-    value: 584,
-    color: "hsl(344, 70%, 50%)",
+    value: 1584
   },
+  {
+    id: "prof35it",
+    value: 584445
+  }
 ];
 export const mockPieData2 = [
   

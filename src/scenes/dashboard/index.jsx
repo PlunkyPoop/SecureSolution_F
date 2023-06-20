@@ -1,3 +1,4 @@
+import React, {useEffect, useState} from 'react';
 import {Box, Container, Grid, Typography, useTheme} from "@mui/material";
 import { tokens } from "../../theme";
 import EmailIcon from "@mui/icons-material/Email";
@@ -16,6 +17,9 @@ import useWebSocket , { ReadyState } from 'react-use-websocket';
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+
+    const [connectionclient, setConnectionclient]=useState([]);
+    const [isFetched, setIsFetched] = useState(false);
     
     const {
         sendMessage,
@@ -27,17 +31,38 @@ const Dashboard = () => {
       } = useWebSocket('ws://localhost:5268/ws', {
         onOpen: (event) => {
             console.log('opened');
-            sendJsonMessage('Client');
+            setIsFetched(true);
         },        
         shouldReconnect: (closeEvent) => true,
       });
 
-      const response = lastJsonMessage;
+    
+      useEffect(()=>{
+        if(isFetched){
+            console.log("ik ben fetched");
+            // wait(500);
+            sendJsonMessage('Client');
+    }
+    },[isFetched, readyState])
 
-      console.log(response);
+    useEffect(()=> {
+        console.log(connectionclient);
+        
+        
+    
+
+
+    }, [connectionclient])
+
+    useEffect(() =>{
+        console.log(lastJsonMessage)
+        const connections = [];
+        if(lastJsonMessage != null) {
+            setConnectionclient(lastJsonMessage)
+        }
+    },[lastJsonMessage])
       
-
-
+      
 
       
     return (
@@ -186,7 +211,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        <PieChart sx={{margin:"10px"}}/>
+                        {/* <PieChart sx={{margin:"10px"}}/> */}
                     </Grid>
                     <Grid item sm={0.15} md={0.15}></Grid>
                     {/* Pie 2 */}
@@ -195,7 +220,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        <PieChart sx={{margin:"10px"}}/>
+                        {/* <PieChart sx={{margin:"10px"}}/> */}
                     </Grid>
                     <Grid item sm={0.15} md={0.15}></Grid>
                     {/* Pie 3 */}
@@ -204,7 +229,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        <PieChart sx={{margin:"10px"}}/>
+                        <PieChart sx={{margin:"10px"}} data={connectionclient}/>
                     </Grid>
                 </Grid>
                 {/*/!* GRID & CHARTS *!/*/}

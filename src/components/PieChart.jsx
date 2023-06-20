@@ -3,13 +3,23 @@ import { tokens } from "../theme";
 import { useTheme } from "@mui/material";
 import { mockPieData1 as data } from "../data/mockData";
 
-const PieChart = () => {
+const PieChart = (data1) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
+    // data1.data.forEach(object => {
+      
+
+    // });
+
+
+
+    console.log(
+       data1.data
+    )
     return(
         <ResponsivePie
-        data={data}
+        data={data1.data}
         theme={{
             axis: {
               domain: {
