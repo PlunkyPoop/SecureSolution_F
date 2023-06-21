@@ -18,7 +18,12 @@ const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
 
-    const [connectionclient, setConnectionclient]=useState([]);
+    const [currentConnections, setCurrentConnections]=useState([]);
+    const [dailySessions, setDailySessions] = useState([{
+        id: "Connections",
+        color: tokens("dark").greenAccent[500],
+        data: []
+    }]);
     const [isFetched, setIsFetched] = useState(false);
     
     const {
@@ -41,24 +46,43 @@ const Dashboard = () => {
         if(isFetched){
             console.log("ik ben fetched");
             // wait(500);
-            sendJsonMessage('Client');
+            sendJsonMessage('currentConn');
+            const timer = setTimeout(() => {
+                sendJsonMessage('sessionDaily');
+              }, 500);
+              return () => clearTimeout(timer);
     }
-    },[isFetched, readyState])
+    },[isFetched])
 
     useEffect(()=> {
-        console.log(connectionclient);
-        
-        
-    
+        console.log(currentConnections);
 
 
-    }, [connectionclient])
+    }, [currentConnections])
+
+    useEffect(()=> {
+        console.log(dailySessions);
+
+
+    }, [dailySessions])
 
     useEffect(() =>{
         console.log(lastJsonMessage)
         const connections = [];
-        if(lastJsonMessage != null) {
-            setConnectionclient(lastJsonMessage)
+        if(lastJsonMessage !== null) {
+            console.log(lastJsonMessage[0])
+            if(lastJsonMessage[0].value !== undefined){
+                console.log("ik ben current")
+                setCurrentConnections(lastJsonMessage)
+            }
+            if(lastJsonMessage[0].x !== undefined){
+                console.log("ik ben daily")
+                setDailySessions([{
+                    id: "Connections",
+                    color: tokens("dark").greenAccent[500],
+                    data:lastJsonMessage
+                }])
+            }
         }
     },[lastJsonMessage])
       
@@ -198,7 +222,11 @@ const Dashboard = () => {
                             </Box>
                         </Box>
                         <Box height="250px" m="-20px 0 0 0">
-                            <LineChart isDashboard={true} />
+                            {
+                            dailySessions[0].data.length > 0 ? 
+                            <LineChart isDashboard={true} data={dailySessions}/>
+                            : <></>
+                        }
                         </Box>
                     </Box>
                 </Box>
@@ -229,7 +257,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        <PieChart sx={{margin:"10px"}} data={connectionclient}/>
+                        <PieChart sx={{margin:"10px"}} data={currentConnections}/>
                     </Grid>
                 </Grid>
                 {/*/!* GRID & CHARTS *!/*/}
