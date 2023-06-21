@@ -1,7 +1,6 @@
 import { ResponsiveLine } from "@nivo/line";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
-import { mockLineData as data1 } from "../data/mockData";
 
 
 const LineChart = ({ data, isDashboard = false }) =>{
@@ -50,7 +49,7 @@ const LineChart = ({ data, isDashboard = false }) =>{
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',
-            min: 'auto',
+            min: '0',
             max: 'auto',
             stacked: true,
             reverse: false
@@ -85,6 +84,7 @@ const LineChart = ({ data, isDashboard = false }) =>{
         pointBorderWidth={2}
         pointBorderColor={{ from: 'serieColor' }}
         pointLabelYOffset={-12}
+        isInteractive={true}
         useMesh={true}
         legends={[
             {
