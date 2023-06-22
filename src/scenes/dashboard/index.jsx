@@ -19,6 +19,8 @@ const Dashboard = () => {
     const colors = tokens(theme.palette.mode);
 
     const [currentConnections, setCurrentConnections]=useState([]);
+    const [topDns, setTopDns]=useState([]);
+    const [networkDirection, setNetworkDirection]=useState([]);
     const [dailySessions, setDailySessions] = useState([{
         id: "Connections",
         color: tokens("dark").greenAccent[500],
@@ -49,6 +51,8 @@ const Dashboard = () => {
             sendJsonMessage('currentConn');
             const timer = setTimeout(() => {
                 sendJsonMessage('sessionDaily');
+                sendJsonMessage('topDNS');
+                sendJsonMessage('networkTraffic');
               }, 500);
               return () => clearTimeout(timer);
     }
@@ -71,9 +75,15 @@ const Dashboard = () => {
         const connections = [];
         if(lastJsonMessage !== null) {
             console.log(lastJsonMessage[0])
-            if(lastJsonMessage[0].value !== undefined){
+            if(lastJsonMessage[0].piechartcurrent !== undefined){
                 console.log("ik ben current")
                 setCurrentConnections(lastJsonMessage)
+            }
+            if(lastJsonMessage[0].piechartdns !== undefined){
+                setTopDns(lastJsonMessage);
+            }
+            if(lastJsonMessage[0].piechartnetwork !== undefined){
+                setNetworkDirection(lastJsonMessage);
             }
             if(lastJsonMessage[0].x !== undefined){
                 console.log("ik ben daily")
@@ -239,7 +249,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        {/* <PieChart sx={{margin:"10px"}}/> */}
+                        <PieChart sx={{margin:"10px"}} data={networkDirection}/>
                     </Grid>
                     <Grid item sm={0.15} md={0.15}></Grid>
                     {/* Pie 2 */}
@@ -248,7 +258,7 @@ const Dashboard = () => {
                           sx={{height: "300px", justifyContent: "center", alignItems: "center", marginBottom:"20px"}}
                           backgroundColor={colors.primary[400]}
                     >
-                        {/* <PieChart sx={{margin:"10px"}}/> */}
+                        <PieChart sx={{margin:"10px"}} data={topDns}/>
                     </Grid>
                     <Grid item sm={0.15} md={0.15}></Grid>
                     {/* Pie 3 */}
